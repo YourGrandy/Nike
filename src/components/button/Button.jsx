@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Button = ({label , imgURL , backGroundColor , textColor , borderColor, fullWidth }) => {
+const Button = ({label , imgURL , backGroundColor , textColor , borderColor, fullWidth, animated}) => {
   return (
     <button 
-        className={`flex items-center justify-center gap-2 py-4 text-lg leading-none ${textColor ? textColor : 'text-white'} border rounded-full px-7 font-montserrat ${fullWidth && 'w-full'} ${backGroundColor ? backGroundColor : 'bg-coral-red'} ${borderColor ? borderColor : 'border-coral-red'}`}
+        className={`flex items-center justify-center gap-2 py-4 text-lg leading-none ${textColor ? textColor : 'text-white'} border rounded-full px-7 font-montserrat ${fullWidth && 'w-full'} ${backGroundColor ? backGroundColor : 'bg-coral-red'} ${borderColor ? borderColor : 'border-coral-red'}${animated ? "animated" : null}`}
     >
         {label}
         {imgURL &&<img 
